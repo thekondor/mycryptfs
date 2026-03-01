@@ -1,10 +1,20 @@
 # MyCryptFS
 
-*An unofficial macOS client for `gocryptfs` encrypted containers with native Finder integration.*
+<p align="center">
+  <img src="images/badges/signed_by_Apple.svg" alt="Signed by Apple">
+  &nbsp;
+  <img src="images/badges/engineered_in_Germany.svg" alt="Engineered in Germany">
+</p>
+
+*macOS client for `gocryptfs`-based encrypted containers with native Finder integration.*
 
 ```
 ⚠︎ this app is NOT vibecoded 🖐️
 ```
+
+## Goal
+
+Safely keep sensitive and personal data in cloud storage or other third-party services without fearing it could be exposed in a leak. Files are encrypted locally before they ever leave the device, so even if a service is breached, the data remains unreadable to anyone without the password.
 
 ## About
 
@@ -33,12 +43,14 @@ The software is distributed as is (see LICENSE) with no obligations and responsi
 - **Short-term Secure Password Storage**: Passwords stored for a short time in macOS Keychain
 - **Create New Volumes**: Create new encrypted filesystems directly from the app
 - **Works with Existing Volumes**: Compatible (see `§ Limitations`) with gocryptfs volumes created on Linux or other platforms
+- **Password File Support**: Unlock volumes using either a password or a password file
 
-## App ↔ File Provider Architecture
+<details>
+<summary><h2>App ↔ File Provider Architecture</h2></summary>
 
 MyCryptFS uses Apple's File Provider framework, which requires a two-part architecture:
 
-**Main Application** 
+**Main Application**
 - Resides in `/Applications` folder
 - Provides the user interface for managing configurations
 - Handles password entry and Keychain storage
@@ -53,6 +65,8 @@ MyCryptFS uses Apple's File Provider framework, which requires a two-part archit
 
 The file provider extension runs separately to maintain security isolation and allow macOS to manage the filesystem lifecycle. Settings are configured in the main app, and macOS automatically handles mounting and Finder integration in the background.
 
+</details>
+
 ## Requirements
 
 - macOS 26.0 or later (macOS Sequoia)
@@ -62,27 +76,16 @@ The file provider extension runs separately to maintain security isolation and a
 
 ### Via Homebrew
 
-Coming soon...
+```bash
+brew tap thekondor/mycryptfs
+brew install --cask mycryptfs
+```
 
 ### Direct Installation
 
-1. Download the latest `.pkg` file from the Releases page
+1. Download the latest `.pkg` file from the [Releases](https://github.com/thekondor/mycryptfs/releases) page
 2. Double-click to install
 3. Find MyCryptFS in Applications folder
-
-> **Note on Installation Warning**
->
-> Based on experience with Apple's File Provider framework becoming unstable and stale (with pain to fix), the current package contains built-in logic to check if MyCryptFS is running and require it to be quit before installation. This triggers a warning during installation (see screenshot below) which might confuse.
->
-> ![Installation warning screenshot](images/screenshot-pkg-install-warning.png)
->
-> If you want to inspect this logic yourself, you can expand the package contents:
-> ```bash
-> pkgutil --expand ~/Downloads/path/to/mycryptfs.pkg /tmp/mycryptfs-expanded
-> ```
->
-> The next release will be probably shipped with a check-free version of the package.
-
 
 ### First Launch
 
