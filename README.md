@@ -26,9 +26,9 @@ Thanks to `gocryptfs`, your encrypted data can be accessed using other compatibl
 
 > **MyCryptFS** brings `gocryptfs` to macOS with proper Finder integration. Encrypted folders appear as native locations in Finder's sidebar, just like any other mounted volume.
 
-| Dashboard | Configurations |
-|-----------|----------------|
-| ![Dashboard view showing unlocked folders and main actions](images/screenshot2.png) | ![Configurations view showing per-folder lock controls](images/screenshot1.png) |
+| Dashboard | Configurations | iOS |
+|-----------|----------------|-----|
+| ![Dashboard view showing unlocked folders and main actions](images/screenshot2.png) | ![Configurations view showing per-folder lock controls](images/screenshot1.png) | ![gocryptfs for iOS via MyCryptFS](images/screenshot3-iphone.png) <div align="center">[wip](https://enkrypted.de/mycryptfs/ios/)</div> |
 
 ## Distribution
 
@@ -172,6 +172,6 @@ If MyCryptFS is useful, there are meaningful ways to support the project - from 
 
 ## License
 
-Copyright (c) 2026 Andrew Sichevoi. All rights reserved.
+Copyright (c) 2026 Andrey Sichevoy (*aka* Andrew Sichevoi). All rights reserved.
 
 This software is provided for personal use. No warranty is provided. Use at your own risk.
