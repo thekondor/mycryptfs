@@ -18,7 +18,7 @@ Safely keep sensitive and personal data in cloud storage or other third-party se
 
 ## About
 
-I got tired of waiting for `gocryptfs` client with proper macOS support, so I built this for my own needs. Sharing it in case others have the same problem.
+I got tired of waiting for `gocryptfs` client with proper macOS & iOS support, so I built this for my own needs. Sharing it in case others have the same problem.
 
 **gocryptfs** is an open-source encrypted filesystem. It encrypts your files on disk while providing transparent access to decrypted content. The official gocryptfs tools work great on Linux, but macOS users have been stuck with command-line solutions or FUSE mounts that don't integrate well with Finder.
 
@@ -28,7 +28,7 @@ Thanks to `gocryptfs`, your encrypted data can be accessed using other compatibl
 
 | Dashboard | Configurations | iOS |
 |-----------|----------------|-----|
-| ![Dashboard view showing unlocked folders and main actions](images/screenshot2.png) | ![Configurations view showing per-folder lock controls](images/screenshot1.png) | ![gocryptfs for iOS via MyCryptFS](images/screenshot3-iphone.png) <div align="center">[wip](https://enkrypted.de/mycryptfs/ios/)</div> |
+| ![Dashboard view showing unlocked folders and main actions](images/screenshot2.png) | ![Configurations view showing per-folder lock controls](images/screenshot1.png) | ![gocryptfs for iOS via MyCryptFS](images/screenshot3-iphone.png) <div align="center">[iPhone/iPad](https://enkrypted.de/mycryptfs/ios/)</div> |
 
 ## Distribution
 
@@ -81,6 +81,16 @@ brew tap thekondor/mycryptfs
 brew install --cask mycryptfs
 ```
 
+### Apple App Store
+
+#### Mac (Desktop)
+
+[![Download on the Mac App Store](https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-mac-app-store.svg)](https://apps.apple.com/app/mycryptfs/id6760225142)
+
+#### iPhone/iPad (Mobile)
+
+[![Download on the App Store](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg)](https://apps.apple.com/us/app/mycryptfs-mobile/id6760840146)
+
 ### Direct Installation
 
 1. Download the latest `.pkg` file from the [Releases](https://github.com/thekondor/mycryptfs/releases) page
@@ -105,9 +115,7 @@ For security and stability reasons, the folders remain unlocked as long as (and 
 
 ## Limitations
 
-**Beta Status**
-
-This software is considered beta quality. While it has been used for some time without issues, there is still a risk of data loss or corruption. Regular backups of encrypted data are essential. Always maintain backups of encrypted data. Use at own risk.
+This software is considered stable. While it has been used for some time without issues, there is still a risk of data loss or corruption. Regular backups of encrypted data are essential. Always maintain backups of encrypted data. Use at own risk.
 
 The underlying configuration format is subject to change between versions, which may affect the appearance or availability of previously added encrypted folders after an update.
 
